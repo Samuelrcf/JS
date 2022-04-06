@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de idade</title>
+    <style>
+        body{
+            background: yellowgreen;
+            font: normal 'Times New Roman';
+        }
+        header{
+            font-size: normal;
+        }
+        section{
+            background: white;
+            border-radius: 10px;
+            padding: 15px;
+            margin: auto;
+            width: 600px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.534);
+        }
+        footer{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Verificador de idade</h1>
+    </header>
+    <section>
+        <div>
+            <p>Ano de nascimento:
+            <input type="number" name="ano" id="ano" min="0">
+            </p>
+            <p>Sexo:
+                <input type="radio" name="sexo" id="masc" checked>
+                <label for="sexo">Masculino</label>
+                <input type="radio" name="sexo" id="fem">
+                <label for="fem">Feminino</label>
+            </p>
+            <p><input type="button" value="Verificar" onclick="verificar()"></p>
+        </div>
+        <div id="res">
+            <img id="foto" src="#" alt="">
+            <p>Preencha os dados acima para ver o resultado.</p>
+        </div>
+    </section>
+    <footer>
+        <p>Samuel Rógenes</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

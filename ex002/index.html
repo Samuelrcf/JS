@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+    <style>
+        body{
+            font-family: 'Times New Roman', Times, serif;
+            background-color: rgba(255, 255, 255, 0.514);
+        }
+        header{
+            color: rgb(0, 0, 0);
+            font-size: 1.3em;
+            text-align: center;
+            text-transform: uppercase;
+        }
+        section{
+            color: rgb(255, 255, 255);
+            font-size: 1.2em;
+            width: 750px;
+            height: 460px;
+            background-color: black;
+            margin: auto;
+            border-radius: 10px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.781);
+        }
+        div{
+            padding: 20px;
+            padding-bottom: 0px;
+        }
+        div#res{
+            padding-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Tabuada</h1>
+    </header>
+    <section>
+        <div>
+            <p>Número:
+                <input type="number" name="numero" id="num">
+            </p>
+            <p>
+                <input type="button" value="Gerar Tabuada" onclick="gerar()">
+            </p>
+            <p>
+                <input type="button" value="Limpar" onclick="limpar()">
+            </p>
+        </div>
+        <div id="res">
+            Tabela:
+        </div>
+    </section>
+    <script>
+        function gerar(){
+            var num = document.getElementById('num')
+            var res = document.getElementById('res')
+            if(num.value.length == 0){
+                window.alert('Insira o número')
+            }else{
+                res.innerHTML = 'Tabuada: <br>'
+            var n = Number(num.value)
+            for(c=1; c<=10; c+=1){
+                x = n * c
+                res.innerHTML += `${n} x ${c} = ${x} <br>`}
+            }
+        }
+        function limpar(){
+            
+            res.innerHTML = 'Tabuada:' 
+        }
+    </script>
+</body>
+</html>

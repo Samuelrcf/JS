@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador</title>
+    <style>
+        body{
+            background: yellowgreen;
+            font: normal 'Times New Roman';
+        }
+        header{
+            font-size: normal;
+            text-align: center;
+        }
+        section{
+            background: white;
+            border-radius: 10px;
+            padding: 15px;
+            margin: auto;
+            width: 500px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.534);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Let's count</h1>
+    </header>
+    <section>
+        <div>
+            <p>De:
+                <input type="number" name="inicio" id="inicio">
+            </p>
+            <p>Até:
+                <input type="number" name="fim" id="fim">
+            </p>
+            <p>Salto:
+                <input type="number" name="salto" id="salto">
+            </p>
+            <p><input type="button" value="Iniciar" onclick="iniciar()"></p>
+        </div>
+        <div id="res">
+            Contagem:
+        </div>
+    </section>
+    <script>
+        function iniciar(){
+            var inicio = document.getElementById('inicio')
+            var fim = document.getElementById('fim')
+            var salto = document.getElementById('salto')
+            var res = document.getElementById('res')
+            if(inicio.value.length == 0 || fim.value.length == 0){
+                window.alert('Insira valores')
+            }else{
+                var i = Number(inicio.value)
+                var f = Number(fim.value)
+                var s = Number(salto.value)
+            }
+            if(s<=0){
+                window.alert('Salto atribuiu o valor 1')
+                s = 1
+            }
+            for(var c=i; c<=f; c+=s){
+                res.innerHTML += `${c} `
+            }
+        }
+    </script>
+</body>
+</html>
